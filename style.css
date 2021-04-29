@@ -1,0 +1,154 @@
+/*font-family imports from google*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+/*Custom colors*/
+:root
+{
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --cyanDark: hsl(179, 100%, 13%);
+
+  --whiteTransp: hsla(0, 0%, 100%, 0.75);
+  --grayLight: hsl(0, 0%, 95%);
+}
+
+body
+{
+  font-size: 15px;
+}
+
+.card
+{
+  width: 100%;
+  border: none;
+  display: inline-block;
+  background-position: top left;
+  background-position-x: 2.2rem;
+  background-position-y: 2.2rem;
+}
+
+.carType
+{
+  font-size: 1.6rem;
+  padding: 2.3rem;
+  padding-top: 6.8rem;
+  padding-bottom: .8rem;
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--grayLight);
+}
+
+.textBody
+{
+  line-height: 1.6;
+  padding-left: 2.3rem;
+  padding-right: 2.3rem;
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--whiteTransp);
+}
+
+#sedans
+{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: var(--orange);
+  background-image: url("/images/icon-sedans.svg");
+  background-repeat: no-repeat;
+}
+
+#suvs
+{
+  background-color: var(--cyan);
+  background-image: url("images/icon-suvs.svg");
+  background-repeat: no-repeat;
+}
+
+#luxury
+{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: var(--cyanDark);
+  background-image: url("images/icon-luxury.svg");
+  background-repeat: no-repeat;
+}
+
+/*Style for "Learn More" button element*/
+.learnMore
+{
+  font-family: 'Lexend Deca', sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 2.4rem;
+  margin-left: 2.3rem;
+  background-color: var(--grayLight);
+  border: none;
+  width: 113px;
+  height: 38px;
+  border-radius: 20px;
+  transition-property: font-size, background-color;
+  transition-duration: .25s;
+  outline: none;
+}
+
+/*More specific styles for each "Learn More" buttons*/
+#sedansButton
+{
+  color: var(--orange);
+}
+#suvsButton
+{
+  color: var(--cyan);
+}
+#luxuryButton
+{
+  color: var(--cyanDark);
+}
+
+/*Styles for hover event on "Learn More" buttongs*/
+.learnMore:hover
+{
+  font-size: 1em;
+  background-color: rgb(255,255,255, 60%);
+  color: white;
+  border: 2px var(--grayLight);
+}
+/*Styles for active event on "Learn More" buttons*/
+.learnMore:active
+{
+  background-color: rgb(255,255,255, 50%);
+  font-size: .95em;
+  color: var(--grayLight);
+}
+/*More specific styles to overide text color on hover and click states*/
+#sedansButton:hover
+{
+  color: white;
+}
+#suvsButton:hover
+{
+  color: white;
+}
+#luxuryButton:hover
+{
+  color: white;
+}
+
+/*Media Query for non Mobile design*/
+@media only screen and (min-width:481px)
+{
+  #flexWrapper
+  {
+    display: flex;
+  }
+
+  #sedans
+  {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+  }
+  #luxury
+  {
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+
+  }
+}
